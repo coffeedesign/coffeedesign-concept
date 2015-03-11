@@ -1,0 +1,54 @@
+.site
+  background:
+    radial-gradient(circle farthest-side at 50% -50%, rgba(teal,0.75) 40%, rgba(violet,0.75) 95%), 
+    url('images/bg-feature.jpg')
+  background-size cover
+  background-repeat no-repeat
+  background-attachment fixed
+  background-position center, center
+  color white
+
+.site-header
+  @extend .pad-3
+  @extend .nest-3
+  position fixed
+  top 0
+  right 0
+  left 0
+  z-index 1
+  
+  &:before
+    content ''
+    display block
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    z-index -1
+    opacity 0.9
+    background:
+      radial-gradient(circle farthest-side at 50% -50%, rgba(teal,0.75) 40%, rgba(violet,0.75) 95%), 
+      url('images/bg-feature.jpg')
+    background-size cover
+    background-repeat no-repeat
+    background-attachment fixed
+    background-position center, center
+    -webkit-mask-image linear-gradient(rgba(#000, 1) 75%, rgba(#000, 0))
+  
+.site-header-brand
+  @extend .align-center
+  
+.site-header-nav
+  @extend .nest-3, .h-max
+  @extend .align-right
+  @media max-small
+    display none
+
+.site-main
+  @extend .pad-1, .nest-1
+  @extend .align-center, .align-middle
+
+.site-footer
+  background whitesmoke
+  @extend .pad-3

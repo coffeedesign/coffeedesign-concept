@@ -1,0 +1,36 @@
+.event
+  @extend .nest-2
+  // background teal_limpid
+  
+  &.-featured
+    @extend .-centered
+    max-width 45em
+
+.event-header
+  @extend .nest-4
+
+.event-header-image
+  img
+    width 15%
+
+.event-header-title
+  @extend h1
+
+.event-header-date
+  text-transform uppercase
+  @extend .h5
+  @extend .nest-5
+  @extend strong
+
+.event-main
+  @extend .h4
+
+.event-signup
+  @extend .h3
+  @extend .pad-v-5, .pad-h-3
+  @extend .-rounded-3
+  background violet_limpid
+  cursor pointer
+  
+  &:hover
+    background darken(teal_limpid, 10)

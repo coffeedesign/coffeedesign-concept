@@ -1,0 +1,21 @@
+doctype 
+html(lang='en').v-max
+  head
+    meta(charset='UTF-8')
+    meta(name="viewport", content="initial-scale=1.0, user-scalable=no, width=device-width")
+    title
+      block title
+    link(rel='stylesheet', href='index.css')
+    script(src="../bower_components/Stickyfill/dist/stickyfill.min.js")
+    block scripts
+
+  body.site.v-max
+    .grid.v-max.align-middle: .grid-items
+      header.row.v-min
+        .site-header.col
+          include partials/header.jade
+      main.row: .col.v-max
+        .grid.align-middle.v-max: .grid-items
+          .site-main.col.v-max
+            block content
+        
